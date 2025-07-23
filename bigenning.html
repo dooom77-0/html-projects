@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title >دورة html</title><!---عنوان الصفحة--->
+   
+
+    <style>
+        table , th , td{
+            border: 5px solid rgb(255, 0, 0); /*---إطار الجدول---*/
+
+          body {
+            background-image: url('تنزيل.jpg');
+
+
+            }
+
+
+        }
+    </style><!---نمط الصفحة --->
+</head>
+<body dir="rtl">
+<h1>دورة HTML</h1><!---عنوان رئيسي--->
+<img src="https://imgs.search.brave.com/alfFp6jDd7Z-U1YdDR64a_cLtxIDUbEYtuOVYmeHVmQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/MDg4ODU0Ni92ZWN0/b3IvaHRtbDUtY3Nz/My1hbmQtamF2YXNj/cmlwdC1wcm9ncmFt/LWljb25zLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUZD/UXpKQnJkWXZiWXBE/VXBuenBoVm9QWWVO/UF8zQ3piQ2YxX1p0/QjluR2s9" 
+height = '200' width = '300'> <!---صورة للدورة--->
+<h2> وصف الدورة </h2><!---عنوان فرعي--->
+<p><!---وصف الدورة--->
+    هذه الدورة تهدف إلى تعليم أساسيات <b>HTML</b> وكيفية إنشاء صفحات ويب بسيطة. 
+</p> <!---يظهر النص بشكل بارز--->
+<p><b>مواعيد البدء:</b><br>
+     سيتم الإعلان عنها قريباً.</p><hr> 
+     <p>محتوى الدورة:</p>
+     <ol> <!---قائمة مرتبة--->   <!---ul قائمة غير مرتبة--->
+         <li>مقدمة في HTML</li> 
+         <li>العناصر الأساسية في HTML</li>
+         <li>إنشاء صفحة ويب بسيطة</li> 
+     </ol> 
+     
+     <p>لمشاهدة فيديو اضغط <a href='https://www.youtube.com/watch?v=IBPcalt2j7Q'>هنا</a>
+    
+    
+    </p>
+      <!---رابط لمشاهدة فيديو--->
+
+      <video height='500' width='500' controls> 
+        <source src="c:\Users\abdrh\OneDrive\Desktop\فيديو واتساب بتاريخ 1447-01-24 في 20.17.06_16be130e.mp4" type="video/mp4">
+
+
+      </video><!---فيديو تعليمي--->
+
+      <audio controls>
+        <source src='c:\Users\abdrh\Downloads\مقطع صوتي واتساب بتاريخ 1447-01-24 في 20.24.02_f143c147 2.mp3' type='audio/mpeg' type='audio/mp3'>
+
+      </audio> <!---صوت تعليمي--->
+
+      <table>
+        <caption>جدول مواعيد الدورة</caption><!---عنوان الجدول--->
+        <tr> <!---الصفوف-->
+            <th>اليوم</th> 
+            <th>المكان</th> 
+        </tr> 
+        <tr> 
+            <td>الاحد و الاثنين</td>
+            <td>class A</td>
+        </tr>
+        <tr> 
+            <td>الثلاثاء و الاربعاء</td>
+            <td>class B</td>
+        </tr> 
+        <tr>
+            <td colspan='2'>الخميس
+            عن بعد</td>
+        </tr>
+
+
+
+      </table> 
+      <hr> <!---فاصل--->
+      <h2>نموذج الانضمام للدورة</h2>  <!---عنوان فرعي لنموذج الانضمام--->
+      <p>يرجى ملء النموذج أدناه للانضمام إلى الدورة
+      <form>
+        <label for ='name'>اسم المستخدم:</label> <!---تسمية حقل الاسم--->
+        <input type = 'text' id = 'name'>
+        <input type='radio' id = 'male' name='gender'> 
+        <label for = 'male'>ذكر</label> 
+        <input type = 'radio' id = 'female' name='gender'> 
+        <label for = 'female'>أنثى</label>
+        <p>من اين سمعت عن HTML؟</p>
+        <input type = 'checkbox' id = 'friend' name = 'friend'>
+        <label for = 'friend'>صديق</label><br>
+        <input type = 'checkbox' id = 'books' name = 'books'>
+        <label for = 'books'>كتب</label><br>
+        <input type = 'checkbox' id = 'internet' name = 'internet'>
+        <label for = 'internet'>إنترنت</label><br>
+
+        <label for = 'city'>اختر مدينتك</label> <!---تسمية حقل المدينة--->
+        <select id = 'city' name = 'city'>
+          <option value = 'Riyadh'>الرياض</option> 
+          <option value = 'Jeddah'>جدة</option>
+          <option value = 'Qassim'>القصيم</option>
+        </select>
+
+        <input type = 'submit' value = 'انضمام للدورة'> <!---زر إرسال النموذج--->
+        <p> </p>
+
+
+      </form> 
+</body>
+</html>

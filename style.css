@@ -1,0 +1,14 @@
+h1 {
+    color:rgb(37, 82, 82); /*تغيير لون العنوان*/
+    text-align: center;/*لتغغير مكان الكتابة إما يمين او يسار او في الوسط*/
+
+}
+
+p {
+    text-align: center;
+    font-size:medium;
+
+}
+body {
+    background-color: antiquewhite;/*لون الخلفية */
+}

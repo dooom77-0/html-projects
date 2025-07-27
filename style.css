@@ -1,14 +1,24 @@
 h1 {
-    color:rgb(37, 82, 82); /*تغيير لون العنوان*/
+    color:rgb(250, 34, 10); /*تغيير لون العنوان*/
     text-align: center;/*لتغغير مكان الكتابة إما يمين او يسار او في الوسط*/
-
+    font-size: 25px;
 }
 
 p {
-    text-align: center;
-    font-size:medium;
+    text-align: right;/*المحاذاة*/
+    color: rgb(0, 0, 0);/*لون الخط*/
+    font-family: 'Gill Sans';/*نوع الخط*/
+    font-size: 16px;/*حجم الخط*/
+    font-weight: normal;/*سمك الخط*/
+    
+    border-style: solid dotted dashed double; /*شكل الاطار*/
+    border-width: medium;/*سمك الاطار*/
+    border-color: blue pink black red;/*لون الاطار*/
+    border-radius:20px;/*التحكم بزوايا الاطار لجعلها دائرية*/
 
 }
+
+
 body {
-    background-color: antiquewhite;/*لون الخلفية */
+    background-color: rgb(117, 117, 117);/*لون الخلفية */
 }

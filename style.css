@@ -13,12 +13,19 @@ p {
     
     border-style: solid dotted dashed double; /*شكل الاطار*/
     border-width: medium;/*سمك الاطار*/
-    border-color: blue pink black red;/*لون الاطار*/
+    border-color: rgb(101, 101, 193);/*لون الاطار*/
     border-radius:20px;/*التحكم بزوايا الاطار لجعلها دائرية*/
-
+}
+div {
+    background-color: #009999;
+    height:300px;/*الارتفاع*/
+    width:50%;/*العرض*/
+    border: solid thin black;
+    margin: 50px 70px;/*المسافة بين النص والهامش*/
+    padding: 50px;/*المسافة بين النص والاطار*/
 }
 
 
 body {
-    background-color: rgb(117, 117, 117);/*لون الخلفية */
+    background-color: rgb(255, 255, 255);/*لون الخلفية */
 }

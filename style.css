@@ -10,6 +10,7 @@ p {
     font-family: 'Gill Sans';/*نوع الخط*/
     font-size: 16px;/*حجم الخط*/
     font-weight: normal;/*سمك الخط*/
+
     
     border-style: solid dotted dashed double; /*شكل الاطار*/
     border-width: medium;/*سمك الاطار*/

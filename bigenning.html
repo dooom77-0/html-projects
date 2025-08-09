@@ -7,21 +7,11 @@
    
 
     <style>
-        table , th , td{
-            border: 5px solid rgb(255, 0, 0); /*---إطار الجدول---*/
-
-          body {
-            background-image: url('تنزيل.jpg');
-
-
-            }
-
-
-        }
+        
     </style><!---نمط الصفحة --->
 </head>
 <body dir="rtl">
-<h1>دورة HTML</h1><!---عنوان رئيسي--->
+<h1 class="text-center">دورة HTML</h1><!---عنوان رئيسي--->
 <img  src="c:\Users\abdrh\OneDrive\Pictures\Screenshots\لقطة شاشة 2025-07-22 173928.png" class="rounded-circle" > <!---صورة للدورة--->
 <h2> وصف الدورة </h2><!---عنوان فرعي--->
 <div>
@@ -31,10 +21,10 @@
 <p><b>مواعيد البدء:</b><br>
      سيتم الإعلان عنها قريباً.</p><hr> 
      <p>محتوى الدورة:</p>
-     <ol> <!---قائمة مرتبة--->   <!---ul قائمة غير مرتبة--->
-         <li>مقدمة في HTML</li> 
-         <li>العناصر الأساسية في HTML</li>
-         <li>إنشاء صفحة ويب بسيطة</li> 
+     <ol class="list-groub"> <!---قائمة مرتبة--->   <!---ul قائمة غير مرتبة--->
+         <li page="list-group-item">مقدمة في HTML</li> 
+         <li page="list-group-item">العناصر الأساسية في HTML</li>
+         <li page="list-group-item">إنشاء صفحة ويب بسيطة</li> 
      </ol> 
      </div>
      <p>لمشاهدة فيديو اضغط <a href='https://www.youtube.com/watch?v=IBPcalt2j7Q'>هنا</a>
@@ -80,12 +70,16 @@
       <h2>نموذج الانضمام للدورة</h2>  <!---عنوان فرعي لنموذج الانضمام--->
       <p>يرجى ملء النموذج أدناه للانضمام إلى الدورة
       <form>
+        <div>
         <label for ='name'>اسم المستخدم:</label> <!---تسمية حقل الاسم--->
         <input type = 'text' id = 'name'>
+        </div>
+        <div>
         <input type='radio' id = 'male' name='gender'> 
         <label for = 'male'>ذكر</label> 
         <input type = 'radio' id = 'female' name='gender'> 
         <label for = 'female'>أنثى</label>
+        </div>
         <p>من اين سمعت عن HTML؟</p>
         <input type = 'checkbox' id = 'friend' name = 'friend'>
         <label for = 'friend'>صديق</label><br>
@@ -101,7 +95,7 @@
           <option value = 'Qassim'>القصيم</option>
         </select>
 
-        <input type = 'submit' value = 'انضمام للدورة'> <!---زر إرسال النموذج--->
+        <bottun type="submit" class="btn btn-primary">انضمام للدورة</bottun> <!---زر إرسال النموذج--->
         <p> </p>
 
 

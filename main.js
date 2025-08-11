@@ -32,3 +32,13 @@ console.log(message);
 let value;
 console.log(value); // undefined غير معرف
 
+let num = 5;
+console.log(num * 'javascript'); // NaN (not a number)
+
+let language2 = 'I am the globlopgabgallab';
+console.log(language2.length); // عدد الحروف
+
+let letter = 'nigga';
+let letter2 = 'ma';
+
+console.log(letter2 + letter); // دمج النصوص

@@ -1,4 +1,4 @@
-function sum(firstNum , secondNum){
+function sum(firstNum , secondNum){ 
     return firstNum + secondNum
 }
 
@@ -10,19 +10,31 @@ function mul(firstNum , secondNum){
     return firstNum * secondNum
 }
 
+function div(firstNum , secondNum){
+    return firstNum / secondNum
+}
+
+function pow(firstNum , secondNum){
+    return firstNum ** secondNum
+}
+
+
+
+
+
 function operation(firstNum , secondNum , opCallpack){ // 
-    return `result = (${opCallpack(firstNum , secondNum)})`
+    return `result = ${opCallpack(firstNum , secondNum)}`
 }
 
 console.log(operation(5 , 2 , sum))
 console.log(operation(5 , 2 , sub))
 console.log(operation(5 , 2 , mul))
+console.log(operation(20 , 19 , div))
+console.log(operation(5 , 4 , pow))
 
-const suml= (first , second) => first + second
 
-console.log(5 , 6)
 
-function format(message , formatCallback){
+function format(message , formatCallback){ // لتغيير صيغة الرسالة على حسب لغة البرمجة 
     return formatCallback(message)
 }
 

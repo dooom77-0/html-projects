@@ -14,7 +14,7 @@ console.log(hasAdult);
 
 const agess = [20,30,22,17,51]
 
-const areAdults = agess.every(function(element){ // يتحقق مما اذا كانت كل العناصر تحقق الشرط الموجود ويطبع true
+const areAdults = agess.every(function(element){ // true يتحقق مما اذا كانت كل العناصر تحقق الشرط الموجود ويطبع 
     return element >= 18
 })
 
@@ -75,3 +75,19 @@ nums.sort()
 
 
 console.log(nums)
+
+
+const nums2 = [5,2,3,6,9]
+const sqtnums = nums2.map(function(currentV){ // تصنع مصفوفة جديدة بناء على التعديلات التي وضعتها في هذه المصفوفة
+    return currentV * currentV
+})
+
+console.log(nums2)
+console.log(sqtnums)
+
+const nummss = [1,2,5,8,8,9,6]
+
+const total = nummss.reduce(function(accumulator, currentV,){
+    return accumulator + currentV
+})
+console.log(total)

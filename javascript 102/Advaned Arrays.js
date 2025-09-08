@@ -63,3 +63,15 @@ const clors = ['black','red','green','blue','white']
 clors.splice(2, 2 , 'gray','yellow') // حذف واستبدال واضافة عناصر في المصفوفة 
 
 console.log(clors)
+
+const arrc = ['red','green','blue']
+
+const strc = arrc.join(' - ') // يجول المصفوفة الى جمل 
+console.log(strc)
+
+
+const nums = [15,35,22,1,0,28,85,41] // يرتب الاعداد تصاعديا reverse = تنازليا    
+nums.sort()
+
+
+console.log(nums)

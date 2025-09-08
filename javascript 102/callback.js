@@ -21,7 +21,6 @@ function pow(firstNum , secondNum){
 
 
 
-
 function operation(firstNum , secondNum , opCallpack){ // 
     return `result = ${opCallpack(firstNum , secondNum)}`
 }

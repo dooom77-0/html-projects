@@ -1,18 +1,21 @@
 .login {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    background-color: #f0f0f0;
+    background-color: #e3e3e3;
     font-family: Arial, sans-serif;
     direction: ltr;
     text-align: center;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     height: 70vh;
     background: rgba(0,0,0,0,0.6);
+    border-radius: 10px;
+    
+    
 }
 .form-group {
-    background-color: white;
+    background-color: rgb(244, 242, 242);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -22,6 +25,31 @@ label {
     margin-bottom: 10px;
     font-weight: bold;
 }
+
+
 input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
     
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(76,175,80,0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
 }

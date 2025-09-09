@@ -1,0 +1,27 @@
+.login {
+    display:flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 70vh;
+    background: rgba(0,0,0,0,0.6);
+}
+.form-group {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input {
+    
+}

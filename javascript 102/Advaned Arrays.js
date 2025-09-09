@@ -87,7 +87,7 @@ console.log(sqtnums)
 
 const nummss = [1,2,5,8,8,9,6]
 
-const total = nummss.reduce(function(accumulator, currentV,){
+const total = nummss.reduce(function(accumulator, currentV,){ // تجمع كل عناصر المصفوفة في رقم واحد
     return accumulator + currentV
 })
 console.log(total)

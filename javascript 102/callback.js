@@ -21,7 +21,7 @@ function pow(firstNum , secondNum){
 
 
 
-function operation(firstNum , secondNum , opCallpack){ // 
+function operation(firstNum , secondNum , opCallpack){ // دالة تأخذ رقمين و دالة اخرى كوسيط
     return `result = ${opCallpack(firstNum , secondNum)}`
 }
 

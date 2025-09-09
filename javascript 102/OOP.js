@@ -19,11 +19,12 @@ console.log(car['color']); // Red
 
 // إنشاء الكلاس 
 class Car{
-    constructor(name, color, year,currntSpeed){
+    static category = 'Vehicle'; // خاصية ثابتة
+    constructor(name, color, year,currentSpeed){
         this.name = name;
         this.color = color;
         this.year = year;
-        this.currentSpeed = currntSpeed;
+        this.currentSpeed = currentSpeed;
     }
     move(speed){
         this.currentSpeed = speed;
@@ -32,6 +33,9 @@ class Car{
     stop(){
         this.currentSpeed = 0;
         return `The ${this.name} has stopped.`;
+    }
+    static info(){
+        return `All cars are categorized as ${this.category}.`;
     }
 }
 const car1 = new Car('Sonata', 'Blue', 2018, 120);
@@ -48,3 +52,4 @@ console.log(car2.stop()); // Sunny has stopped.
 console.log(car3.move(100)); // Accent is moving at 100 km/h
 
 console.log(car3.stop()); // Accent has stopped.
+console.log(Car.info()); // All cars are categorized as Vehicle.

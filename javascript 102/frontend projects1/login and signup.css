@@ -1,48 +1,51 @@
-.login {
+.login-page {
+    background-color: rgb(205, 204, 204);
+    background: rgba(255, 255, 255, 0.85);
+
+
+
+}
+
+.container {
     display: flex;
     flex-direction: column;
-    background-color: #e3e3e3;
-    font-family: Arial, sans-serif;
-    direction: ltr;
-    text-align: center;
-    justify-content: center; 
-    align-items: center;
-    padding: 30px;
-    height: 70vh;
-    background: rgba(0,0,0,0,0.6);
-    border-radius: 10px;
-    
-    
+    align-items: center;      /* توسيط العناصر أفقيًا */
+    justify-content: center;  /* توسيط العناصر عموديًا */
+    height: 100vh;            /* يأخذ كامل ارتفاع الصفحة */
 }
-.signup {
-    display: flex;
-    flex-direction: column;
-    background-color: #e3e3e3;
-    font-family: Arial, sans-serif;
-    direction: ltr;
-    text-align: center;
-    justify-content: center; 
-    align-items: center;
-    padding: 50px;
-    height: 100vh;
-    background: rgba(0,0,0,0,0.6);
-    border-radius: 10px;
-    height:100%;
-    
-    
+#login-div {
+    padding: 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
+    margin: auto; 
+    margin-top: 100px; 
+    height: 500px;
 }
-.signup{
-     display: flex;
-    flex-direction: column;
-    background-color: #e3e3e3;
-    font-family: Arial, sans-serif;
-    direction: ltr;
-    text-align: center;
-    justify-content: center; 
-    align-items: center;
-    padding: 50px;
-    height: 100vh;
-    background: rgba(0,0,0,0,0.6);
-    border-radius: 10px;
-    height:100%;
+.signup-page {
+    background-color: rgb(181, 181, 181);
+    min-height: 100vh;
+    position: relative;
+    background: rgba(255, 255, 255, 0.85); /* أبيض شفاف */
 }
+          /* يأخذ كامل ارتفاع الصفحة */
+
+#signup-div {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* نفس ظل تسجيل الدخول */
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto; /* نفس خلفية تسجيل الدخول */
+}
+#login-btn {
+    
+    align-items: center;
+    justify-content: center;
+}
+
+

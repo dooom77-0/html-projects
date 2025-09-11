@@ -51,7 +51,7 @@ section{
     background-attachment: fixed;
 }
 .main h2{
-    font-size: 1.4em;
+    font-size: 2em;
     color: #fff;
     font-weight: 500;
 
@@ -60,7 +60,7 @@ section{
 .main h2 span{
     display: inline-block;
     margin: 10px 0;
-    color:rgb(47, 71, 255);
+    color:rgb(86, 106, 254);
     font-size: 3em;
     font-weight: 600;
     

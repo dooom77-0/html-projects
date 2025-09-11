@@ -9,7 +9,7 @@
 
 .login-page {
     background-color: rgb(179, 179, 179);
-    background-image: url('wallpaperflare.com_wallpaper\ \(6\).jpg');
+    background-image: url('wallpaperflare.com_wallpaper\ \(3\).jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 }
 
 #login-div.inputbox {
-    border: 2px solid #ccc; /* لون الحدود */
+    border: 2px solid #000000; /* لون الحدود */
     border-radius: 10px; /* نصف قطر الحدود */
     padding: 10px; /* الحشو داخل مربع الإدخال */
     font-size: 16px; /* حجم الخط */
@@ -45,7 +45,7 @@
 }
 .signup-page {
     background-color: rgb(179, 179, 179);
-    background-image: url('wallpaperflare.com_wallpaper\ \(1\).jpg');
+    background-image: url('wallpaperflare.com_wallpaper\ \(2\).jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: auto; /* نفس خلفية تسجيل الدخول */
+    height: auto; 
 }
 #login-btn {
     
@@ -71,13 +71,14 @@
     justify-content: center;
 }
 .login-label {
-    color:#000000;
+    color:#ffffff;
 }
 #login-p {
     font-size: 14px;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     font-weight: bold;
+    font-size: medium;
 }
 
 input.form-control, input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
@@ -101,7 +102,18 @@ p {
     font-weight: bold; /* حجم الخط */
 }
 #login-div, #signup-div {
-    backdrop-filter: blur(5px); /* يجعل الصندوق ضبابي */
+    backdrop-filter: blur(3px); /* يجعل الصندوق ضبابي */
     -webkit-backdrop-filter: blur(5px); /* دعم للمتصفحات القديمة */
 }
-#signup-div.form
+#signup-p {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+}
+#Gmail, #password, #FirstName, #LastName, #Birthday, #confirm-password {
+    background: rgba(255, 255, 255, 0.3); /* أبيض شفاف */
+    border: 1px solid #ffffff;
+    color: #000000;
+}

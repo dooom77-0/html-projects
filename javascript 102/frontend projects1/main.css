@@ -104,7 +104,7 @@ section{
     display:flex;
     justify-content:center;
     text-align:center;
-    color: #000000;
+    color: #ffffff;
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 40px;
@@ -153,4 +153,40 @@ section{
     background-position: center;
     background-attachment: fixed;
 
+}
+.card a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #2877ed;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding:0.5em 1.5em;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    transition: 0.5s ease;
+}
+.card a:hover{
+    background-color: #2d0193;
+    box-shadow: 0 10px 20px rgba(45,1,147,0.3);
+    transform: scale(1.1); 
+}
+.about {
+    background-color: #3a6cf4;
+}
+.about h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
 }

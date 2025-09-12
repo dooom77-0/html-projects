@@ -80,7 +80,7 @@ section{
     font-size: 1.1em;
     font-weight: 600;
     display: inline-block;
-    padding:0.9357em 2.1875em;
+    padding:0.9375em 2.1875em;
     border-radius: 15px;
     letter-spacing: 1px;
     margin-bottom: 40px;
@@ -104,20 +104,22 @@ section{
     display:flex;
     justify-content:center;
     text-align:center;
-    color: #2877ed;
+    color: #000000;
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 40px;
 
 }
 .content {
-    display:flex;
-    justify-content:center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 0;
 }
 .card {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    flex: 0 0 auto;
     width:21.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 30%);
     border-radius: 18px;
@@ -126,7 +128,7 @@ section{
     transition: 0.5s ease;
 }
 .card:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(1 1 1 / 20%);
 }
 .icon {
@@ -134,4 +136,21 @@ section{
     font-size: 8em;
     text-align: center;
     margin-bottom: 20px;
+}
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color:#2877ed;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.cards {
+    background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1714589655883/ce0b34df-283b-4ab2-8773-bf8aeb8a9f3e.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 }

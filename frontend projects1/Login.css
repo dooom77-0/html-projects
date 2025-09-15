@@ -87,6 +87,27 @@ body {
     box-shadow: 0 10px 20px rgba(45,1,147,0.3);
     transform: scale(1.1);
 }
+#Signup-btn{
+    text-align: center;
+}
+#Signup-btn a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #1371ff;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding:0.5em 1.5em;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    transition: 0.5s ease;
+}
+#Signup-btn a:hover {
+    background-color: #2d0193;
+    box-shadow: 0 10px 20px rgba(45,1,147,0.3);
+    transform: scale(1.1);
+}
 .social-icons{
     text-align: center;
 }

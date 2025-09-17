@@ -20,6 +20,7 @@ console.log(car['color']); // Red
 // إنشاء الكلاس 
 class Car{
     static category = 'Vehicle'; // خاصية ثابتة
+
     constructor(name, color, year,currentSpeed){
         this.name = name;
         this.color = color;
@@ -53,3 +54,28 @@ console.log(car3.move(100)); // Accent is moving at 100 km/h
 
 console.log(car3.stop()); // Accent has stopped.
 console.log(Car.info()); // All cars are categorized as Vehicle.
+
+
+class Animal {
+    constructor(name,color){
+        this.name = name
+        this.color = color
+        this.speed = 0
+    }
+    run(speed){
+        this.speed = speed
+        return`${this.name}runs with speed ${this.speed} km/h`
+    }
+}
+class Cat extends Animal{
+    makesound(){
+        return`meow...`
+    }
+}
+class Fox extends Animal{
+    makesound(){
+        return`bark...`
+    }
+}
+const fox = new Fox('Mango','orange',30)
+console.log(fox.run(30))

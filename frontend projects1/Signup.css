@@ -66,10 +66,10 @@ body {
 
     
 }
-.login-btn  {
+.Signup-btn  {
     text-align: center;
 }
-.login-btn a {
+.Signup-btn a {
     text-decoration: none;
     color: #fff;
     background-color: #2877ed;
@@ -82,15 +82,15 @@ body {
     margin-top: 15px;
     transition: 0.5s ease;
 }
-.login-btn a:hover {
+.Signup-btn a:hover {
     background-color: #2d0193;
     box-shadow: 0 10px 20px rgba(45,1,147,0.3);
     transform: scale(1.1);
 }
-#Signup-btn{
+#Login-btn{
     text-align: center;
 }
-#Signup-btn a{
+#Login-btn a{
     text-decoration: none;
     color: #fff;
     background-color: #1371ff;
@@ -103,7 +103,7 @@ body {
     margin-top: 15px;
     transition: 0.5s ease;
 }
-#Signup-btn a:hover {
+#Login-btn a:hover {
     background-color: #2d0193;
     box-shadow: 0 10px 20px rgba(45,1,147,0.3);
     transform: scale(1.1);

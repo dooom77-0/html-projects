@@ -39,9 +39,23 @@ body {
     border-radius: 40px;
     font-size: large;
     padding: 20px 40px 20px 20px;
+    transition: all 0.3s ease;
 }
 .input-box input::placeholder{
     color: gray;
+}
+.input-box input:invalid:not(:placeholder-shown){
+    border:2px solid red;
+    animation: justshake 0.3s forwards;
+}
+.input-box input:valid{
+    border: 2px solid green;
+}
+@keyframes justshake{
+    25%{transform: translateX(5px);}
+    50%{transform: translateX(-5px);}
+    75%{transform: translateX(5px);}
+    100%{transform: translateX(-5px);}
 }
 .input-box i {
     position: absolute;
@@ -118,5 +132,15 @@ body {
     margin-top: 20px;
     font-size: 1.7em;
     padding-right: 20px;
+    color: #757474;
+    transition: 0.5s ease;
+    
+}
+.social-icons a:hover{
+    border-radius: 50%;
+    padding: 5px;
+    transform: scale(1.1);
+    background-color: var(--color);
+
 }
 

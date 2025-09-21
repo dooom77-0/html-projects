@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "johnpapa.vscode-peacock",
-        "aaron-bond.better-comments"
+        "aaron-bond.better-comments",
+        "pranaygp.vscode-css-peek"
     ]
 }

@@ -43,6 +43,19 @@ body {
 .input-box input::placeholder{
     color: gray;
 }
+.input-box input:invalid:not(:placeholder-shown){
+    border:2px solid red;
+    animation: justshake 0.3s forwards;
+}
+.input-box input:valid{
+    border: 2px solid green;
+}
+@keyframes justshake{
+    25%{transform: translateX(5px);}
+    50%{transform: translateX(-5px);}
+    75%{transform: translateX(5px);}
+    100%{transform: translateX(-5px);}
+}
 .input-box i {
     position: absolute;
     right: 20px;
@@ -114,9 +127,19 @@ body {
 .social-icons a{
     text-decoration: none;
     display: inline-block;
-    color:#000000;
+    color:#555;
     margin-top: 20px;
     font-size: 1.7em;
     padding-right: 20px;
+    transition: 0.5s ease;
+    border-radius: 50%;
 }
+.social-icons a:hover{
+    padding: 5px;
+    transform: scale(1.1);
+    background-color: var(--color);
+
+}
+
+
 

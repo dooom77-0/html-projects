@@ -27,15 +27,21 @@ header{
     font-weight: bold;
     text-transform: uppercase;
 }
+#name:hover{
+  color: #2d0193;
+}
 .navigation a{
     color: #3a6cf4;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 600;
     padding-left: 30px;
+    transition: 0.5s ease;
+    display: inline-block;
 }
 .navigation a:hover{
     color: #2d0193;
+    transform: scale(1.1);
 }
 section{
     padding: 100px 150px;
@@ -55,18 +61,46 @@ section{
 .main h2{
     font-size: 2em;
     color: #fff;
-    font-weight: 500;
+    font-weight: 700;
 
 }
 
 .main h2 span{
     display: inline-block;
-    margin: 10px 0;
+    position: relative;
+    margin: 10px 0px;
     color:rgb(86, 106, 254);
     font-size: 3em;
     font-weight: 600;
-    
+    letter-spacing: 1px;
 }
+
+.typing {
+  /* font-family: monospace; */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: 2px solid rgb(86, 106, 254); /* المؤشر */
+  color: #fff;
+  font-size: 2em;
+  font-weight: 600;
+  animation: typing 3s forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; } /* عدد الحروف في النص */
+}
+
+@keyframes blink {
+  0%, 100% { border-color: rgb(86, 106, 254); }
+  50% { border-color: transparent; }
+}
+
+
+
+
+
 .main h3{
     color:#fff;
     font-size: 2em;
@@ -75,9 +109,6 @@ section{
     margin-top: 10px;
     margin-bottom: 30px;
 }
-
-
-
 .main-btn {
     text-decoration: none;
     color: #fff;
@@ -102,7 +133,6 @@ section{
     font-size: 1.8em;
     padding-bottom: 20px;
     font-weight: 600;
-
 }
 .social-icons a{
     text-decoration: none;
@@ -111,10 +141,7 @@ section{
     font-size: 1.7em;
     padding-right: 20px;
     padding: 5px;
-    transition: 0.5s ease;
-    
-    
-    
+    transition:0.5s ease;
 }
 .social-icons a:hover{
     background-color:var(--color);
@@ -214,6 +241,7 @@ section{
   justify-content: center;
   gap: 40px;
   padding-left: 20px;
+  flex-wrap: wrap;
 }
 .about-img {
   position: relative;

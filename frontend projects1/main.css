@@ -80,7 +80,6 @@ section{
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  border-right: 2px solid rgb(86, 106, 254); /* المؤشر */
   color: #fff;
   font-size: 2em;
   font-weight: 600;
@@ -110,7 +109,6 @@ section{
     margin-bottom: 30px;
 }
 .main-btn {
-    text-decoration: none;
     color: #fff;
     background-color: #2877ed;
     font-size: 1.1em;
@@ -169,8 +167,9 @@ section{
     scroll-behavior: smooth;
     scrollbar-width: none;
     padding: 20px 0;
-}
-.card {
+  }
+ 
+  .card {
     background: rgba(255, 255, 255, 0.8);
     flex: 0 0 auto;
     width:21.25em;
@@ -191,7 +190,7 @@ section{
     color:#2877ed;
     font-size: 8em;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .info {
     text-align: center;
@@ -202,6 +201,10 @@ section{
     font-size: 1.5em;
     font-weight: 700;
     margin-bottom: 20px;
+}
+.info p {
+  font-weight: 400;
+  font-size: 20px;
 }
 .cards {
     background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1714589655883/ce0b34df-283b-4ab2-8773-bf8aeb8a9f3e.png);
@@ -287,7 +290,9 @@ section{
 .img-text h3{
   margin-bottom: 30px;
   background-color: burlywood;
-  display: inline-block;
+  display:inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 .img-text p {
   font-size: 1.2em;
@@ -298,6 +303,25 @@ section{
   background-color: #c9d6ff;
   justify-content: space-around;
 }
+.op-btn {
+  color: #fff;
+  background-color: #2877ed;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  padding:0.9375em 2.1875em;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+.op-btn:hover {
+  background-color: #2d0193;
+    box-shadow: 0 0px 20px rgba(45,1,147,0.3);
+    transform: scale(1.1); 
+}
+
 
 
 @media (max-width: 1024px) {/*for pads and laptops*/

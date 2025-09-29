@@ -7,6 +7,8 @@
     <title>الصفحة الرئيسية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 
 
 </head>
@@ -26,7 +28,7 @@
         <div>
             <h2>Hi, I am Abdulrahman<br><span class="typing">Web Developer</span></h2>
             <h3>I love coding with html</h3>
-            <a href="https://github.com/dooom77-0/py-projects/tree/main/%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86" class="main-btn">View Projects</a>
+            <button onclick="Github()" class="main-btn">View Projects</button>
             <p class="contact">Contact me</p>
             <div class="social-icons">
                 <a href="https://github.com/dashboard" style="--color:rgb(184, 184, 0);"><i class="fa-brands fa-github"></i></a>
@@ -111,9 +113,13 @@
                 <h3>put the cursor on the picture</h3>
                 <p>My name is Abdulrahman ,I am a begginer web Developer,I love building websites 
                     with html,css and javascript</p>
-            </div>
+                </div>
+                <div class="op-btn">
+                    <button onclick="opinion()">opinion</button>
+                    <p id="feedback"></p>
+                </div>
         </div>
     </section>
-
+    <script src="main.js" defer></script>
 </body>
 </html>

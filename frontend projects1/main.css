@@ -175,7 +175,7 @@ section{
     width:21.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 30%);
     border-radius: 18px;
-    padding:25px;
+    padding:10px;
     flex-shrink: 0;
     margin:15px;
     transition: 0.5s ease;
@@ -190,7 +190,7 @@ section{
     color:#2877ed;
     font-size: 8em;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .info {
     text-align: center;
@@ -303,7 +303,7 @@ section{
   background-color: #c9d6ff;
   justify-content: space-around;
 }
-.op-btn {
+.su-btn {
   color: #fff;
   background-color: #2877ed;
   font-size: 1.1em;
@@ -316,11 +316,13 @@ section{
   transition: 0.5s ease;
   text-decoration: none;
 }
-.op-btn:hover {
+.su-btn:hover {
   background-color: #2d0193;
     box-shadow: 0 0px 20px rgba(45,1,147,0.3);
     transform: scale(1.1); 
 }
+
+
 
 
 

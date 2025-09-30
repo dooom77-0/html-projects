@@ -3,13 +3,26 @@ function Github(){
 }
 
 function Suggest() {
-    let opinion = prompt("Give me your suggestions for the site");
+  let suggestion = prompt("Give me your suggestions for the site :");
 
-    if (opinion && opinion.trim() !== "") {
-      document.getElementById("feedback").innerText = 'Thanks for your feedback';
-      document.getElementById("su-btn1").style.display = "none";
-    } else {
-      document.getElementById("feedback").innerText = "No suggestions have been entered.";
-    }
- 
+  if (suggestion && suggestion.trim() !== "") {
+    // جلب الآراء القديمة من التخزين
+    let oldSuggestions = JSON.parse(localStorage.getItem('user-suggestions')) || [];
+
+    // إضافة الرأي الجديد
+    oldSuggestions.push(suggestion);
+
+    // حفظ المصفوفة بعد تحويلها إلى JSON
+    localStorage.setItem('user-suggestions', JSON.stringify(oldSuggestions));
+
+    document.getElementById('su-btn1').style.display = 'none'
+
+    // عرض رسالة الشكر
+    document.getElementById('feedback').innerText = 'Thanks for your suggestions';
+    
+    document.getElementById('su-btn').style.display = 'none';
+  } 
+  else {
+    document.getElementById('feedback').innerText = "No suggestions have been entered.";
   }
+}

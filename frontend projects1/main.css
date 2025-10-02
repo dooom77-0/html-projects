@@ -56,6 +56,24 @@ header{
     color: #2d0193;
     transform: scale(1.1);
 }
+.navigation{
+  transition: transform 0.3s ease;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.navigation.show{
+  animation: slideIn 0.3s ease forwards;
+}
+
+
 section{
     padding: 100px 150px;
 }
@@ -89,30 +107,19 @@ section{
 }
 
 .typing {
-  /* font-family: monospace; */
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   color: #fff;
   font-size: 2em;
   font-weight: 600;
-  animation: typing 3s forwards, blink 0.7s infinite;
+  animation: typing 3s forwards;
 }
 
 @keyframes typing {
   from { width: 0; }
   to { width: 14ch; } /* عدد الحروف في النص */
 }
-
-@keyframes blink {
-  0%, 100% { border-color: rgb(86, 106, 254); }
-  50% { border-color: transparent; }
-}
-
-
-
-
-
 .main h3{
     color:#fff;
     font-size: 2em;
@@ -136,7 +143,7 @@ section{
 }
 .main-btn:hover{
     background-color: #2d0193;
-    box-shadow: 0 0px 20px rgba(45,1,147,0.3);
+    box-shadow: 0 0px 20px rgba(45,1,147,0.9);
     transform: scale(1.1); 
 }
 .contact  {

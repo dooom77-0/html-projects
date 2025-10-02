@@ -34,7 +34,6 @@ const navLinks = document.getElementById('nav-links');
 
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
-  navLinks.classList.toggle("open");
   
 
   // إذا القائمة مفتوحة، نحط ✖

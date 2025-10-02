@@ -391,7 +391,7 @@ section{
     font-size: 2.5em;
   }
 
-  .main h3 {
+  .main h4 {
     font-size: 1.5em;
   }
 
@@ -427,8 +427,8 @@ section{
     font-size: 2em;
   }
 
-  .main h3 {
-    font-size: 1.2em;
+  .main h4 {
+    font-size: 1em;
   }
 
   .card {

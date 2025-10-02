@@ -3,6 +3,8 @@ function Github(){
 }
 
 function Suggest() {
+  alert('Note: This is my first project in html , css and javascript!')
+
   let suggestion = prompt("Give me your suggestions for the site :");
 
   if (suggestion && suggestion.trim() !== "") {
@@ -20,9 +22,25 @@ function Suggest() {
     // عرض رسالة الشكر
     document.getElementById('feedback').innerText = 'Thanks for your suggestions';
     
-    document.getElementById('su-btn').style.display = 'none';
   } 
   else {
     document.getElementById('feedback').innerText = "No suggestions have been entered.";
+    document.getElementById('su-btn1').style.display = 'none';
   }
 }
+
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.getElementById('nav-links');
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+  navLinks.classList.toggle("open");
+  
+
+  // إذا القائمة مفتوحة، نحط ✖
+  if (navLinks.classList.contains("show")) {
+    menuBtn.textContent = "✖";
+  } else {
+    menuBtn.textContent = "☰";
+  }
+});

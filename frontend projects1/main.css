@@ -13,7 +13,7 @@ body {
 header{
     background-color: #ffffff;
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -30,6 +30,19 @@ header{
 #name:hover{
   color: #2d0193;
 }
+.menu-icon {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  display: none; /* نخفيه في الشاشات الكبيرة */
+  transition: rotate 0.3s ease,color 0.3s ease;
+  }
+  .menu-icon.open{
+    transform: rotate(180deg);
+    color:#ffcc22;
+  }
 .navigation a{
     color: #3a6cf4;
     text-decoration: none;
@@ -325,9 +338,34 @@ section{
 
 
 
-@media (max-width: 1024px) {/*for pads and laptops*/
+@media (max-width: 1024px) {/*for and laptops*/
   header {
     padding: 10px 50px;
+  }
+  .menu-icon{
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+  .navigation{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #ffffff;
+    width: 200px;
+    padding: 10px;
+    z-index: 1000;
+  }
+  .navigation.show{
+    display: flex;
+  }
+  .navigation ul {
+    flex-direction: column;
+  }
+  .navigation a {
+    border-bottom: 1px solid #fff;
   }
 
   section {
@@ -354,6 +392,7 @@ section{
     gap: 20px;
     padding: 20px;
   }
+  
 }
 
 @media (max-width: 768px) { /*for phones*/
@@ -362,11 +401,10 @@ section{
     align-items:flex-start;
     padding: 10px 20px;
   }
-
-  .navigation a {
-    padding-left: 10px;
-    font-size: 1em;
+  .menu-icon{
+    display: block;
   }
+
 
   section {
     padding: 60px 20px;
@@ -401,4 +439,12 @@ section{
   .icon {
     font-size: 5em;
   }
+
+  .overlay-text{
+    font-size: 1.3rem;
+  }
+  .img-text h3{
+    font-size: 1.4rem;
+  }
 }
+

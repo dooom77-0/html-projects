@@ -120,7 +120,7 @@ section{
   from { width: 0; }
   to { width: 14ch; } /* عدد الحروف في النص */
 }
-.main h3{
+.main h4{
     color:#fff;
     font-size: 2em;
     font-weight: 700;

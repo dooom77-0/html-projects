@@ -6,18 +6,48 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Calculator</title>
 </head>
-<body>
-    
+<body class="bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 h-screen w-full flex justify-center items-center">
+    <style>
+        .btn {
+            background-color:rgb(51 65 85);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgb(255,255,255);
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover{
+            background-color:rgb(30,41,59);
+            transform: scale(1.1);
+        }
+    </style>
+    <div id="container" class="bg-slate-700 max-w-sm w-full rounded-xl shadow-md shadow-white">
+        <input type="text" id="display" class="w-full p-4  mb-5 h-25 text-white text-2xl
+        rounded-lg shadow-inner text-right" readonly>
+        <div id="buttons" class="grid grid-cols-4 text-center text-white text-3xl gap-3 m-2 p-6">
+            <button class="btn text-teal-600">AC</button>
+            <button class="btn text-teal-600 flex justify-center items-center">del</button>
+            <button class="btn text-teal-600">%</button>
+            <button class="btn text-teal-600">÷</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn text-teal-600">×</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn text-teal-600">-</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn text-teal-600" >+</button>
+            <button class="btn">0</button>
+            <button class="btn">00</button>
+            <button class="btn">.</button>
+            <button class="btn text-teal-600">=</button>
 
-
-
-
-
-
-
-
-
-
+        </div>
+    </div>
     <script src="calculator.js" defer></script>
 </body>
 </html>

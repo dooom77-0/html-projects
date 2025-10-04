@@ -16,12 +16,12 @@ addBtn.addEventListener("click", () => {
   // نص المهمة
   const span = document.createElement("span");
   span.textContent = taskText;
-  span.className = "text-gray-800 flex-grow";
+  span.className = "text-gray-800 flex-grow rounded-md";
 
   // زر الحذف
   const delBtn = document.createElement("button");
   delBtn.textContent = "✖";
-  delBtn.className = "bg-red-500 hover:bg-red-700 text-white font-bold px-1 py-1 rounded";
+  delBtn.className = "hover:bg-red-700 text-white font-bold px-1 py-1 rounded-md";
 
   // حذف المهمة عند الضغط
   delBtn.addEventListener("click", () => {
@@ -30,11 +30,11 @@ addBtn.addEventListener("click", () => {
 
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
-  checkbox.className = 'w-6 h-6 text-purple-600 bg-gray-200 border-gray-300 rounded focus:ring-purple-500 ml-5 text-2xl';
+  checkbox.className = 'w-6 h-6 text-purple-600 bg-gray-200 border-gray-300 rounded-md focus:ring-purple-500 ml-5';
 
   checkbox.addEventListener('click',() =>{
     span.classList.toggle('line-through');
-    span.classList.toggle('text-gray-400');
+    span.classList.toggle('text-black');
   });
 
   // تركيب العناصر داخل المهمة

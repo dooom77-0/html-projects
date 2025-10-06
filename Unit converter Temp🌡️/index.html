@@ -6,18 +6,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Unit converter App</title>
 </head>
-<body>
-
-
-
-
-
-
-
-
-
-
-    
+<body class="flex justify-center items-center h-screen w-full bg-gradient-to-tl from-slate-100 to-slate-500">
+    <div id="container" class="max-w-lg w-full h-80 bg-stone-300 rounded-xl shadow-md">
+            <h2 id="title" class="text-3xl text-center mt-3">Temp converter</h2>
+            <div id="from" class="mt-5">
+                <select name="Units" id="fromUnit" class="text-xl mx-4">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">kelvin</option>
+                </select>
+                <input type="number" id="tempInput" placeholder="Enter value..." class="relative right-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black">
+                </div>
+            <div id="result" class="mt-5">
+                <select name="Units" id="toUnit" class="text-xl mx-4">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">kelvin</option>
+                </select>
+                <input type="number" id="tempOutput" placeholder="Result..." class="relative left-0 bottom-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black" readonly>
+            </div>
+        
+    </div>
     <script src="Unit converter.js" defer></script>
 </body>
 </html>

@@ -3,7 +3,7 @@ const toUnit = document.getElementById('toUnit');
 const tempInput = document.getElementById('tempInput');
 const outputField = document.getElementById('tempOutput');
 
-function ConvertTemperature(value, from, to) {
+function ConvertTemperature(value, from, to) { //* قيم التحويل
     value = parseFloat(value);
     if (from === 'Celsius' && to === 'Kelvin') {
         return value + 273.15;
@@ -21,19 +21,19 @@ function ConvertTemperature(value, from, to) {
         return (value * 9/5) - 459.67;
     }
     else if (from === 'Fahrenheit' && to === 'Kelvin') {
-        return ((value - 32) * 5/9) + 273.15;
+        return ((value - 32) * 5/9) + 459.67;
     }
     else {
-        return value;
+        return value; //*نفس القيمة
     }
 }
 
-function UpdateResult() {
+function UpdateResult() { //*تحديث الناتج
   const value = parseFloat(tempInput.value);
   const from = fromUnit.value;
   const to = toUnit.value;
 
-  const result = ConvertTemperature(value, from, to);
+  const result = ConvertTemperature(value, from, to); //*استدعاء الدالة الام
   outputField.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
 }
 

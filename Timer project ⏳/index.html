@@ -7,12 +7,15 @@
     <title>My-own-Timer</title>
 </head>
 <body class="h-screen flex flex-col justify-center items-center gap-6 bg-gradient-to-r from-slate-100 to-slate-200">
-  <h1 id="display" class="text-4xl font-bold text-gray-800 mb-4">00:00:00</h1>
+  <h1 id="display" class="text-4xl font-bold text-gray-800 mb-4 text-shadow-lg">00:00:00</h1>
 
   <div class="flex gap-6">
-    <button onclick="startTimer()" class=" text-green-500 px-5 py-3 rounded shadow-md hover:bg-green-500 hover:text-white font-bold">Start</button>
-    <button onclick="stopTimer()" class=" text-red-500 px-5 py-3 rounded shadow-md hover:bg-red-500 font-bold hover:text-white">Stop</button>
-    <button onclick="resetTimer()" class=" text-gray-500 px-5 py-3 rounded shadow-md hover:bg-gray-500 hover:text-white font-bold">Reset</button>
+    <button onclick="startTimer()" class=" text-green-500 px-5 py-3 rounded shadow-md hover:bg-green-500 hover:text-white font-bold outline-2 outline-green-500">Start</button>
+    
+    <button onclick="stopTimer()" class=" text-red-500 px-5 py-3 rounded shadow-md hover:bg-red-500 
+    font-bold hover:text-white outline-2 outline-red-500">Stop</button>
+    
+    <button onclick="resetTimer()" class=" text-gray-500 px-5 py-3 rounded shadow-md hover:bg-gray-500 hover:text-white font-bold outline-2 outline-gray-500">Reset</button>
   </div>
 </body>
 

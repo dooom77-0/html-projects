@@ -44,3 +44,4 @@ function resetTimer() { // reset timer
   hours = 0;
   updateDisplay();
 }
+

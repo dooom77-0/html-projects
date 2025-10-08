@@ -1,3 +1,4 @@
+document.getElementById('Test').onclick = checkGuess
 let secretNumber = Math.floor(Math.random()*50)+1
 let maxAttempts = 10
 let currentAttemps = 0
@@ -5,7 +6,7 @@ let currentAttemps = 0
 function checkGuess(){
     const input = document.getElementById('guess')
     const message = document.getElementById('message')
-    const attemps = document.getElementById('attemps')
+    const restart = document.getElementById('Test')
 
     const guess = parseInt(input.value);
     ++currentAttemps;
@@ -14,6 +15,9 @@ function checkGuess(){
         message.innerText = `congrats, you guessed the number 🎉`;
         message.className = 'font-bold mt-2'
         input.disabled = true;
+        restart.innerText = 'Restart'
+        restart.onclick = restartGame
+
     }
     else if(currentAttemps >= maxAttempts){
         message.innerText = `Sorry you lose😔 the secret number was : ${secretNumber}`
@@ -21,10 +25,27 @@ function checkGuess(){
         input.disabled = true;
     }
     else if (guess < secretNumber){
-        alert('Higher ⬆️');
+        alert('Higher ↑');
+    }
+    else if(guess > secretNumber){
+        alert('Lower ↓')
     }
     else{
-        alert('Lower ⬇️')
-    }
     document.getElementById('Attempts').innerText = `Attemp No.${currentAttemps} from No.${maxAttempts}`
+}}
+    
+function restartGame() {
+  secretNumber = Math.floor(Math.random() * 50) + 1;
+  currentAttemps = 0;
+
+  const input = document.getElementById("guess");
+  const message = document.getElementById("message");
+  const attempts = document.getElementById("attempts");
+  const button = document.getElementById("Test");
+
+  input.disabled = false;
+  input.value = "";
+  message.innerText = "";
+  button.innerText = "Guess";
+  button.onclick = checkGuess();
 }

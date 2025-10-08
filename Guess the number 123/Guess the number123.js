@@ -1,4 +1,4 @@
-document.getElementById('Test').onclick = checkGuess
+document.getElementById('check').onclick = checkGuess
 let secretNumber = Math.floor(Math.random()*50)+1
 let maxAttempts = 10
 let currentAttemps = 0
@@ -6,7 +6,7 @@ let currentAttemps = 0
 function checkGuess(){
     const input = document.getElementById('guess')
     const message = document.getElementById('message')
-    const restart = document.getElementById('Test')
+    const restart = document.getElementById('check')
 
     const guess = parseInt(input.value);
     ++currentAttemps;
@@ -41,7 +41,7 @@ function restartGame() {
   const input = document.getElementById("guess");
   const message = document.getElementById("message");
   const attempts = document.getElementById("attempts");
-  const button = document.getElementById("Test");
+  const button = document.getElementById("check");
 
   input.disabled = false;
   input.value = "";

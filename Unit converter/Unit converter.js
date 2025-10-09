@@ -303,3 +303,97 @@ function UpdateTimeResult() {
 fromTimeUnit.addEventListener('change', UpdateTimeResult);
 toTimeUnit.addEventListener('change', UpdateTimeResult);
 timeInput.addEventListener('input', UpdateTimeResult);
+
+//-------------------------------Volume converter---------------------------------//
+const fromVolumeUnit = document.getElementById('fromUnitVolume');
+const toVolumeUnit = document.getElementById('toUnitVolume');
+const volumeInput = document.getElementById('VolumeInput');
+const volumeOutput = document.getElementById('VolumeOutput');
+
+function ConvertVolume(value, from, to) {
+    value = parseFloat(value);
+    if (from === 'Liter' && to === 'Milli L') {
+        return value * 1000;
+    }
+    else if (from === 'Milli L' && to === 'Liter') {
+        return value / 1000;
+    }
+    else if (from === 'Liter' && to === 'Cubic M') {
+        return value / 1000;
+    }
+    else if (from === 'Cubic M' && to === 'Liter') {
+        return value * 1000;
+    }
+    else if (from === 'Liter' && to === 'Cubic Cm') {
+        return value * 1000000;
+    }
+    else if (from === 'Cubic Cm' && to === 'Liter') {
+        return value / 1000000;
+    }
+    else if (from === 'Milli L' && to === 'Cubic M') {
+        return value / 1000000;
+    }
+    else if (from === 'Cubic M' && to === 'Milli L') {
+        return value * 1000000;
+    }
+    else if (from === 'Milli L' && to === 'Cubic Cm') {
+        return value * 1000;
+    }
+    else if (from === 'Cubic Cm' && to === 'Milli L') {
+        return value / 1000;
+    }
+    else if (from === 'Milli L' && to === 'Cubic Cm') {
+        return value * 1000;
+    }
+    else if (from === 'Cubic Cm' && to === 'Milli L') {
+        return value / 1000;
+    }
+    else if (from === 'Milli L' && to === 'Gallon') {
+        return value / 3785.41;
+    }
+    else if (from === 'Gallon' && to === 'Milli L') {
+        return value * 3785.41;
+    }
+    else if (from === 'Liter' && to === 'Gallon') {
+        return value / 3.78541;
+    }
+    else if (from === 'Gallon' && to === 'Liter') {
+        return value * 3.78541;
+    }
+    else if (from === 'Cubic M' && to === 'Cubic Cm') {
+        return value * 1000000;
+    }
+    else if (from === 'Cubic Cm' && to === 'Cubic M') {
+        return value / 1000000;
+    }
+    else if (from ==='Cubic M' && to === 'Gallon'){
+        return value * 264.172;
+    }
+    else if (from ==='Gallon' && to === 'Cubic M'){
+        return value / 264.172;
+    }
+    else if (from === 'Cubic Cm' && to === 'Gallon'){
+        return value / 3785.41;
+    }
+    else if (from === 'Gallon' && to === 'Cubic Cm'){
+        return value * 3785.41;
+    }
+    else {
+        return value;
+    }
+}
+
+function UpdateVolumeResult() {
+    const value = parseFloat(volumeInput.value);
+    const from = fromUnitVolume.value;
+    const to = toUnitVolume.value;
+
+    const result = ConvertVolume(value, from, to);
+    volumeOutput.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
+}
+
+fromVolumeUnit.addEventListener('change', UpdateVolumeResult);
+toVolumeUnit.addEventListener('change', UpdateVolumeResult);
+volumeInput.addEventListener('input', UpdateVolumeResult);
+
+

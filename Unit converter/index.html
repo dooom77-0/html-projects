@@ -25,16 +25,16 @@
             <ul class="flex justify-center items-center h-full gap-10 text-xl font-semibold">
                 <li><a href="#Temperature" class="text-blue-500 hover:text-red-500 transition duration-300">Temperature</a></li>
                 <li><a href="#Length" class="text-blue-500 hover:text-slate-500 transition duration-300">Length</a></li>
-                <li><a href="#weight" class="text-blue-500 hover:text-green-500 transition duration-300">Weight</a></li>
-                <li><a href="#time" class="text-blue-500 hover:text-purple-500 transition duration-300">Time</a></li>
-                <li><a href="#volume" class="text-blue-500 hover:text-cyan-400 transition duration-300">Volume</a></li>
+                <li><a href="#Weight" class="text-blue-500 hover:text-green-500 transition duration-300">Weight</a></li>
+                <li><a href="#Time" class="text-blue-500 hover:text-purple-500 transition duration-300">Time</a></li>
+                <li><a href="#Volume" class="text-blue-500 hover:text-cyan-400 transition duration-300">Volume</a></li>
             </ul>
         </nav>
     </header>
     <section class="flex justify-center items-center h-screen w-full bg-gradient-to-tl from-red-200 to-orange-400" id="Temperature">
         <div id="container" class="max-w-lg w-full h-80 bg-stone-300 rounded-xl shadow-md">
             <h1 class="text-center text-3xl font-bold m-5 text-shadow-lg">Temperature Converter</h1>
-                <div id="from" class="mt-5">
+                <div id="from" class="mt-5 ml-4">
                     <select name="Units" id="fromUnit" class="text-xl mx-4">
                         <option value="Celsius">Celsius</option>
                         <option value="Fahrenheit">Fahrenheit</option>
@@ -42,7 +42,7 @@
                     </select>
                     <input type="number" id="tempInput" step="any" placeholder="Enter value..." class="relative right-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black">
                     </div>
-                <div id="result" class="mt-5">
+                <div id="result" class="mt-5 ml-4">
                     <select name="Units" id="toUnit" class="text-xl mx-4">
                         <option value="Celsius">Celsius</option>
                         <option value="Fahrenheit">Fahrenheit</option>
@@ -55,7 +55,7 @@
     <section id="Length" class="flex justify-center items-center h-screen w-full bg-gradient-to-tl from-slate-100 to-slate-500" >
         <div id="container" class="max-w-lg w-full h-80 bg-stone-300 rounded-xl shadow-md">
             <h1 class="text-center text-3xl font-bold m-5 text-shadow-lg">Length Converter</h1>
-                <div id="from" class="mt-5">
+                <div id="from" class="mt-5 ml-4">
                     <select name="Units" id="fromUnitLength" class="text-xl mx-4">
                         <option value="Meter">Meter</option>
                         <option value="Kilometer">Kilometer</option>
@@ -65,7 +65,7 @@
                     </select>
                     <input type="number" id="lengthInput" step="any" min="0" placeholder="Enter value..." class="relative right-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black">
                     </div>
-                <div id="result" class="mt-5">
+                <div id="result" class="mt-5 ml-4">
                     <select name="Units" id="toUnitLength" class="text-xl mx-4">
                         <option value="Meter">Meter</option>
                         <option value="Kilometer">Kilometer</option>
@@ -77,10 +77,10 @@
                 </div>
         </div>
     </section>
-    <section id="weight" class="flex justify-center items-center h-screen w-full bg-gradient-to-tl from-green-200 to-green-500">
+    <section id="Weight" class="flex justify-center items-center h-screen w-full bg-gradient-to-tl from-green-200 to-green-500">
             <div id="container" class="max-w-lg w-full h-80 bg-stone-300 rounded-xl shadow-md">
                     <h1 class="text-center text-3xl font-bold m-5 text-shadow-lg">Weight Converter</h1>
-                    <div id="from" class="mt-5">
+                    <div id="from" class="mt-5 ml-4">
                         <select name="Units" id="fromUnitWeight" class="text-xl mx-4">
                             <option value="Gram">Gram</option>
                             <option value="Kilogram">Kilogram</option>
@@ -90,7 +90,7 @@
                         </select>
                         <input type="number" id="weightInput" placeholder="Enter value..." class="relative right-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black">
                         </div>
-                    <div id="result" class="mt-5">
+                    <div id="result" class="mt-5 ml-4">
                         <select name="Units" id="toUnitWeight" class="text-xl mx-4">
                             <option value="Gram">Gram</option>
                             <option value="Kilogram">Kilogram</option>
@@ -99,6 +99,34 @@
                             <option value="Ounce">Ounce</option>
                         </select>
                         <input type="number" id="weightOutput" placeholder="Result..." class="relative left-0 bottom-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black" readonly>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section id="Time" class="flex justify-center items-center h-screen w-full bg-gradient-to-tl from-purple-200 to-purple-500">
+            <div id="container" class="max-w-lg w-full h-80 bg-stone-300 rounded-xl shadow-md">
+                    <h1 class="text-center text-3xl font-bold m-5 text-shadow-lg">Time Converter</h1>
+                    <div id="from" class="mt-5 ml-4">
+                        <select name="Units" id="fromUnitTime" class="text-xl mx-4">
+                            <option value="Second">Second</option>
+                            <option value="Minute">Minute</option>
+                            <option value="Hour">Hour</option>
+                            <option value="Day">Day</option>
+                            <option value="Week">Week</option>
+                            <option value="Month">Month</option>
+                        </select>
+                        <input type="number" id="timeInput" placeholder="Enter value..." class="relative right-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black">
+                        </div>
+                    <div id="result" class="mt-5 ml-4">
+                        <select name="Units" id="toUnitTime" class="text-xl mx-4">
+                            <option value="Second">Second</option>
+                            <option value="Minute">Minute</option>
+                            <option value="Hour">Hour</option>
+                            <option value="Day">Day</option>
+                            <option value="Week">Week</option>
+                            <option value="Month">Month</option>
+                        </select>
+                        <input type="number" id="timeOutput" placeholder="Result..." class="relative left-0 bottom-0 m-5 p-4 text-xl bg-white rounded-md border-2 border-black" readonly>
                     </div>
             </div>
         </div>

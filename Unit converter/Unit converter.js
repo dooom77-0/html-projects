@@ -187,3 +187,119 @@ function UpdateWeightResult() { //*تحديث الناتج
 fromWeightUnit.addEventListener('change', UpdateWeightResult);
 toWeightUnit.addEventListener('change', UpdateWeightResult);
 weightInput.addEventListener('input', UpdateWeightResult);
+
+//-------------------------------Time converter---------------------------------//
+const fromTimeUnit = document.getElementById('fromUnitTime');
+const toTimeUnit = document.getElementById('toUnitTime');
+const timeInput = document.getElementById('timeInput');
+const timeOutput = document.getElementById('timeOutput');
+
+function ConvertTime(value, from, to) {
+    value = parseFloat(value);
+    if (from === 'Second' && to === 'Minute') {
+        return value / 60;
+    }
+    else if (from === 'Minute' && to === 'Second') {
+        return value * 60;
+    }
+    else if (from === 'Hour' && to === 'Minute') {
+        return value * 60;
+    }
+    else if (from === 'Minute' && to === 'Hour') {
+        return value / 60;
+    }
+    else if (from === 'Second' && to === 'Hour') {
+        return value / 3600;
+    }
+    else if (from === 'Hour' && to === 'Second') {
+        return value * 3600;
+    }
+    else if (from === 'Day' && to === 'Hour') {
+        return value * 24;
+    }
+    else if (from === 'Hour' && to === 'Day') {
+        return value / 24;
+    }
+    else if (from === 'Week' && to === 'Day') {
+        return value * 7;
+    }
+    else if (from === 'Day' && to === 'Week') {
+        return value / 7;
+    }
+    else if (from === 'Week' && to === 'Hour') {
+        return value * 168;
+    }
+    else if (from === 'Hour' && to === 'Week') {
+        return value / 168;
+    }
+    else if (from === 'Second' && to === 'Day') {
+        return value / 86400;
+    }
+    else if (from === 'Day' && to === 'Second') {
+        return value * 86400;
+    }
+    else if (from === 'Week' && to === 'Month') {
+        return value / 4;
+    }
+    else if (from === 'Month' && to === 'Week') {
+        return value * 4;
+    }
+    else if (from === 'Day' && to === 'Month') {
+        return value / 30;
+    }
+    else if (from === 'Month' && to === 'Day') {
+        return value * 30;
+    }
+    else if (from ==='Minute' && to === 'Month'){
+        return value / 43200;
+    }
+    else if (from ==='Month' && to === 'Minute'){
+        return value * 43200;
+    }
+    else if (from ==='Second' && to === 'Week'){
+        return value / 604800;
+    }
+    else if (from ==='Week' && to === 'Second'){
+        return value * 604800;
+    }
+    else if (from ==='Second' && to === 'Month'){
+        return value / 2592000;
+    }
+    else if (from ==='Month' && to === 'Second'){
+        return value * 2592000;
+    }
+    else if( from ==='Minute' && to === 'Day'){
+        return value / 1440;
+    }
+    else if( from ==='Day' && to === 'Minute'){
+        return value * 1440;
+    }
+    else if (from ==='Minute' && to === 'Week'){
+        return value / 10080;
+    }
+    else if (from ==='Week' && to === 'Minute'){
+        return value * 10080;
+    }
+    else if (from ==='Hour' && to === 'Month'){
+        return value / 730;
+    }
+    else if (from ==='Month' && to === 'Hour'){
+        return value * 730;
+    }
+    else {
+        return value;
+    }
+}
+
+function UpdateTimeResult() {
+    const value = parseFloat(timeInput.value);
+    const from = fromTimeUnit.value;
+    const to = toTimeUnit.value;
+
+    const result = ConvertTime(value, from, to);
+    timeOutput.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
+}
+
+fromTimeUnit.addEventListener('change', UpdateTimeResult);
+toTimeUnit.addEventListener('change', UpdateTimeResult);
+timeInput.addEventListener('input', UpdateTimeResult);

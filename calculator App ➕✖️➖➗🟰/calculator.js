@@ -19,7 +19,7 @@ buttons.forEach(button => {
     } else if (value === "=") {
       calculate();
     } else if (["+", "-", "*", "/", "%"].includes(value)) {
-      setOperator(value);
+      setOperator(value)
     } else {
       appendNumber(value);
     }

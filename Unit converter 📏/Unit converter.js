@@ -34,7 +34,7 @@ function UpdateResult() { //*تحديث الناتج
   const to = toUnit.value;
 
   const result = ConvertTemperature(value, from, to); //*استدعاء الدالة الام
-  outputField.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
+  outputField.value = result.toFixed(2);
 }
 
 
@@ -85,6 +85,12 @@ function ConvertLength(value, from, to) { //* قيم التحويل
     else if (from === 'Kilometer' && to === 'Mile') {
         return value / 1.60934;
     }
+    else if (from === 'Mile' && to === 'Meter') {
+        return value * 1609.34;
+    }
+    else if (from === 'Meter' && to === 'Mile') {
+        return value / 1609.34;
+    }
     else {
         return value;
     }
@@ -95,7 +101,7 @@ function UpdateLengthResult() { //*تحديث الناتج
   const to = toLengthUnit.value;
 
   const result = ConvertLength(value, from, to);
-    lengthOutput.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
+    lengthOutput.value = result.toFixed(2);
 }
 
 fromLengthUnit.addEventListener('change', UpdateLengthResult);
@@ -181,7 +187,7 @@ function UpdateWeightResult() { //*تحديث الناتج
   const to = toWeightUnit.value;
 
   const result = ConvertWeight(value, from, to);
-  weightOutput.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
+  weightOutput.value = result.toFixed(2);
 }
 
 fromWeightUnit.addEventListener('change', UpdateWeightResult);
@@ -297,7 +303,7 @@ function UpdateTimeResult() {
     const to = toTimeUnit.value;
 
     const result = ConvertTime(value, from, to);
-    timeOutput.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
+    volumeOutput.value = result.toFixed(2);
 }
 
 fromTimeUnit.addEventListener('change', UpdateTimeResult);
@@ -389,7 +395,7 @@ function UpdateVolumeResult() {
     const to = toUnitVolume.value;
 
     const result = ConvertVolume(value, from, to);
-    volumeOutput.value = result.toLocaleString("en-US", { maximumFractionDigits: 2 });
+    volumeOutput.value = result.toFixed(2);
 }
 
 fromVolumeUnit.addEventListener('change', UpdateVolumeResult);

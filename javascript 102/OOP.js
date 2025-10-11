@@ -73,9 +73,16 @@ class Cat extends Animal{
     }
 }
 class Fox extends Animal{
+
+/*************  ✨ Windsurf Command 🌟 ***********  *************/
+    /**
+     * Return the sound the fox makes
+     * @returns {string} The sound of the fox
+     */
     makesound(){
-        return`bark...`
+        return `bark...`
     }
+/*******  f824aa40-d4c7-4a4a-971a-3b60d7b2428b *******/
 }
 const fox = new Fox('Mango','orange',30)
 console.log(fox.run(30))

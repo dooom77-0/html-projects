@@ -6,6 +6,42 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Currency converter App</title>
 </head>
-<body>
+<body class="flex justify-center items-center w-full h-screen bg-gradient-to-tr from-gray-500 to-gray-200">
+    <div id="container" class="bg-slate-300 max-w-lg w-full h-auto rounded-lg mx-auto my-5 p-7">
+        <h1 class="text-center text-4xl font-bold my-5 text-shadow-lg">💵Currency Converter💵</h1>
+        <div id="currencyFrom-con">
+            <select id="currency-from" class="text-xl my-4 bg-white rounded-lg p-2 mx-5">
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">British Pound</option>
+                <option value="SAR">Saudi Riyal</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="AED">UAE Dirham</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+            </select>
+            <span class="text-3xl mx-2">From</span>
+
+        </div>
+        <div id="currencyTo-con">
+            <select id="currency-to" class="text-xl my-2 bg-white rounded-lg p-2 mx-5">
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">British Pound</option>
+                <option value="SAR">Saudi Riyal</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="AED">UAE Dirham</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+            </select>
+            <span class="text-3xl mx-2">To</span>
+        </div>
+        <h3 id="result" class="m-7"></h3>
+        <input type="number" id="amount" class="text-xl my-5 bg-white rounded-lg p-2 mx-5 w-3/5" placeholder="Enter Amount">
+        <button id="convert" class="bg-blue-500 text-white text-2xl rounded-lg p-2 mx-3 my-2 hover:bg-blue-700">Convert</button>
+
+    <script src="currency.js"></script>
 </body>
 </html>

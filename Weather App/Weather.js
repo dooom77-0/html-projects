@@ -27,7 +27,7 @@ async function getWeather(location) {
             `;
             weatherInfo.querySelector('h2').className = `text-xl text-slate-900 font-bold mb-4`;
             weatherInfo.querySelectorAll('p').forEach(p => {
-                p.className = `text-lg text-slate-900 font-semibold mb-2`;
+                p.className = `text-lg text-slate-900 font-semibold mb-2 font-monospace`;
             });
         } else {
             weatherInfo.innerHTML = `<p>Error: ${data.message}</p>`;

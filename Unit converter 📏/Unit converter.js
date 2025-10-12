@@ -299,11 +299,11 @@ function ConvertTime(value, from, to) {
 
 function UpdateTimeResult() {
     const value = parseFloat(timeInput.value);
-    const from = fromTimeUnit.value;
-    const to = toTimeUnit.value;
+    const from = fromUnitTime.value;
+    const to = toUnitTime.value;
 
     const result = ConvertTime(value, from, to);
-    volumeOutput.value = result.toFixed(2);
+    timeOutput.value = result.toFixed(2);
 }
 
 fromTimeUnit.addEventListener('change', UpdateTimeResult);

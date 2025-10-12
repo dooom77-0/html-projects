@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Weather App</title>
+</head>
+<body class="flex justify-center items-center bg-gradient-to-tr from-blue-300 to-blue-500 w-full h-screen">
+    <div id="container" class="bg-white max-w-md w-full h-auto rounded-lg">
+        <h1 class="text-center text-4xl font-bold my-5 text-shadow-lg">Weather App 🌞</h1>
+        <div class="text-center">
+            <p class="text-yellow-600 text-lg font-sans">🌥️Get the latest weather updates for your location.🌥️</p>
+        </div>
+        <div id="weather-input" class="p-4 text-center">
+            <input type="text" id="location" placeholder="Enter location" class="border p-2 rounded-lg w-full my-5">
+            <div id="weather-info" class="my-5 text-center"></div>
+            <button id="get-weather" class="my-5 outline-3 outline-blue-500 text-blue-500 p-2 rounded-lg text-lg hover:bg-blue-500 hover:text-white">Get Weather</button>
+        </div>
+    </div>
+
+</body>
+</html>

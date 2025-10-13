@@ -29,14 +29,14 @@ async function getCountryInfo(name) {
         countryInfo.innerHTML = `
         <h2>${country.name.common}</h2>
         <p>Capital: ${country.capital}</p>
-        <p>Region: ${country.region}</p>
-        <p>Subregion: ${country.subregion}</p>
-        <p>Population: ${country.population.toLocaleString()}</p>
+        <p>Continent: ${country.region}</p>
+        <p>Population: ${country.population.toLocaleString()} <span>(The number is not accurate)</span></p>
         <img src="${country.flags.png}" alt="${country.name.common} Flag">
 
         `;
         // Add any additional information or styling as needed
         countryInfo.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow-md', 'my-5');
         countryInfo.querySelector('img').classList.add('w-32', 'h-auto', 'mt-2', 'border', 'border-gray-300', 'text-center', 'mx-auto');
+        countryInfo.querySelector('span').classList.add('text-md', 'text-gray-500', 'italic');
     }
 }

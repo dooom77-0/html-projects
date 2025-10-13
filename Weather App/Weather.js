@@ -20,7 +20,7 @@ async function getWeather(location) {
         if (data.cod === 200) {
             weatherInfo.innerHTML = `
                 <h2>Weather in ${data.name}، ${data.sys.country}</h2>
-                <p>Temperature: ${data.main.temp} °C</p>
+                <p>Temperature: ${data.main.temp} °C <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="${data.weather[0].description}"></p>
                 <p>Condition: ${data.weather[0].description}</p>
                 <p>Humidity: ${data.main.humidity}%</p>
                 <p>Wind Speed: ${data.wind.speed} m/s</p>
@@ -29,6 +29,7 @@ async function getWeather(location) {
             weatherInfo.querySelectorAll('p').forEach(p => {
                 p.className = `text-lg text-slate-900 font-semibold mb-2 font-monospace`;
             });
+            document.querySelector('img').className = `inline-block w-10 h-10`;
         } else {
             weatherInfo.innerHTML = `<p>Error: ${data.message}</p>`;
         }

@@ -15,7 +15,7 @@ convert.addEventListener("click", () => {
             const exchangeRate = data.rates[toCurrency];
             const convertedAmount = (amountValue * exchangeRate).toFixed(2);
             result.innerText = `${amountValue} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
-            result.className = `text-2xl text-slate-900 font-bold mt-4 font-monospace`;
+            result.className = `text-2xl text-slate-900 font-bold mt-4 font-monospace bg-slate-200 rounded-lg p-2 mx-5`;
         })
         .catch(error => console.log(error));
     if(amountValue === '') {

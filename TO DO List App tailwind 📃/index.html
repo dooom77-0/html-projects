@@ -1,39 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-
-    <title>TO DO-List</title>
+    <title>TO-DO List App</title>
 </head>
-<body class=" flex justify-center items-center w-full h-screen 
-    bg-gradient-to-r from bg-purple-600 to-pink-400 p-2">
-        <div id="container" class=" bg-slate-300 max-w-md w-full p-3 rounded-md my-3 mx-auto shadow-lg">
-            <h2 class="flex items-center mb-3 text-2xl text-center text-cyan-700 text-shadow-lg font-semibold" >TO DO-List App <img src="checklist.png" class="ml-3 w-auto h-9 mt-1" ></h2>
-            <div id="row" class="my-5">
-                <input class=" max-w-80 w-full
-                px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400
-                focus:outline-none focus:ring-2 focus:ring-blue-500 
-                shadow-sm" type="text" id="input-box" placeholder="Add a task...">
-                <button id="addBtn" class="bg-emerald-300 px-3 py-1 rounded-md ml-3 hover:bg-emerald-500
-                shadow-md">➕</button>
-            </div>
-                <ul id="taskList" class="text-xl px-2 py-2 space-y-2">
-                </ul>
-            </div>
-    
-    
-         </div>
+<body class="flex justify-center items-center w-full h-screen bg-gradient-to-tr from-red-300 to-orange-300">
+    <div id="container" class="bg-white rounded-lg shadow-lg p-6 h-auto max-w-lg w-full">
+        <div>
+            <h1 class="text-left text-3xl font-semibold mb-5 text-shadow-lg">TO-DO List App<img src="https://img.icons8.com/ios/50/000000/list.png" alt="list-icon" class="inline-block h-16 w-16 ml-5"></h1>
+        </div>
+        <div class="mb-4">
+            <input type="text" id="taskInput" class="border border-gray-300 rounded-lg p-2 w-2/3 focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-slate-600" placeholder="Enter a new task ">
+            <button id="addBtn" class="mt-2 bg-orange-400 text-white rounded-lg px-4 py-2 hover:bg-orange-500 focus:outline-none focus:ring-2 mx-4 focus:ring-orange-400" onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="taskList" class="list-disc pl-5 space-y-2">
+            <!-- Tasks will be added here dynamically -->
+        </ul>
     </div>
-    
-
-
-
-
-<script src="TO DO-List App.js" defer></script>
+    <script src="TO DO-List App.js"></script>
 </body>
 </html>

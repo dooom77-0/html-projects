@@ -13,7 +13,6 @@ cards.forEach(symbol => { //* الكلمات
   card.textContent = "❓"; //* الاشكال من الخلف 
 
   card.addEventListener("click", () => {//* التعامل مع الكارت
-    card.classList.add("flip")
     if (lock || flipped.includes(card) || card.classList.contains("matched")) return; //* التحقق من الحالة
 
     card.textContent = symbol; 
@@ -21,7 +20,7 @@ cards.forEach(symbol => { //* الكلمات
 
     if (flipped.length === 2) {
       lock = true;
-      const [a, b] = flipped;
+      const [a, b] = flipped; //* الكارت الاول والثاني
       if (a.dataset.symbol === b.dataset.symbol) {
         a.classList.add("matched", "bg-green-200"); //* الحصول على النتيجة
         b.classList.add("matched", "bg-green-200");

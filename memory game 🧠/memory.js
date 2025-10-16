@@ -40,16 +40,12 @@ cards.forEach(symbol => { //* الكلمات
   board.appendChild(card);
 });
 
-const restart = document.getElementById("restart");
 
-const allmatched = document.querySelectorAll(".card.matched").length === cards.length;
 
-if (allmatched) {
-  restart.classList.remove("hidden");
+function restart() {
+  window.location.reload();
 }
 
-restart.addEventListener("click", () => {
-  location.reload();
-});
+
 
 

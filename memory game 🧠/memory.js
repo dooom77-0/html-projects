@@ -8,11 +8,12 @@ let lock = false;
 
 cards.forEach(symbol => { //* الكلمات
   const card = document.createElement("div"); //* الكارت
-  card.className = "card bg-slate-200 text-3xl flex items-center justify-center h-24 rounded shadow cursor-pointer";
-  card.dataset.symbol = symbol; //* الاشكال
-  card.textContent = "❓"; //* الاشكال
+  card.className = "cards bg-slate-200 text-3xl flex items-center justify-center h-24 rounded shadow cursor-pointer";
+  card.dataset.symbol = symbol; //*  الاشكال من الامام
+  card.textContent = "❓"; //* الاشكال من الخلف 
 
-  card.addEventListener("click", () => { //* التعامل مع الكارت
+  card.addEventListener("click", () => {//* التعامل مع الكارت
+    card.classList.add("flip")
     if (lock || flipped.includes(card) || card.classList.contains("matched")) return; //* التحقق من الحالة
 
     card.textContent = symbol; 
@@ -22,12 +23,35 @@ cards.forEach(symbol => { //* الكلمات
       lock = true;
       const [a, b] = flipped;
       if (a.dataset.symbol === b.dataset.symbol) {
-        a.classList.add("matched"); //* الحصول على النتيجة
-        b.classList.add("matched");
+        a.classList.add("matched", "bg-green-200"); //* الحصول على النتيجة
+        b.classList.add("matched", "bg-green-200");
+        a.classList.remove("bg-slate-200");
+        b.classList.remove("bg-slate-200");
         flipped = [];
         lock = false;
+        const allmatched = document.querySelectorAll(".matched");
+        if (allmatched.length === cards.length) {
+          const restart = document.getElementById("restart");
+          const congrats = document.getElementById("Congrats");
+          congrats.innerText = "You won, congrats!🎉🎉";
+          restart.classList.remove("hidden");
+        }
       } else {
         setTimeout(() => {
+          a.classList.remove("bg-slate-200");
+          b.classList.remove("bg-slate-200");
+          a.classList.add("shake","bg-red-200");
+          b.classList.add("shake","bg-red-200");
+          
+        });
+        setTimeout(() => {
+          
+          a.classList.add("bg-slate-200");
+          b.classList.add("bg-slate-200");
+          a.classList.remove("bg-red-200");
+          b.classList.remove("bg-red-200");
+          a.classList.remove("shake")
+          b.classList.remove("shake")
           a.textContent = "❓";
           b.textContent = "❓";
           flipped = [];
@@ -39,7 +63,6 @@ cards.forEach(symbol => { //* الكلمات
 
   board.appendChild(card);
 });
-
 
 
 function restart() {

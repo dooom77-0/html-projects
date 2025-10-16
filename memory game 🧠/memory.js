@@ -25,7 +25,7 @@ cards.forEach(symbol => { //* الكلمات
         a.classList.add("matched", "bg-green-200"); //* الحصول على النتيجة
         b.classList.add("matched", "bg-green-200");
         a.classList.remove("bg-slate-200");
-        b.classList.remove("bg-slate-200");
+        b.classList.remove("bg-slate-200"); 
         flipped = [];
         lock = false;
         const allmatched = document.querySelectorAll(".matched");

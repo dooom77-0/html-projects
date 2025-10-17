@@ -18,6 +18,7 @@ function stopTimer(){
   clearInterval(timerinterval);
 }
 
+
 const board = document.getElementById("board"); //* القائمة
 let flipped = [];
 let lock = false;

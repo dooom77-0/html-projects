@@ -1,6 +1,22 @@
-const symbols = ["🐱", "🐶", "🐼", "🦊", "🐸", "🐵","🐨","🐽"]; //*الاشكال 
+const symbols = ["🐶", "🐱", "🐭", "🐻","🐺", "🦊","🐯","🐵"]; //*الاشكال 
 let cards = [...symbols, ...symbols]; //* التكرار
-cards.sort(() => Math.random() - 0.5); //* الترتيب  
+cards.sort(() => Math.random() - 0.5); //* الترتيب 
+let attempts = 0;
+let seconds = 0;
+let timerinterval;
+const display = document.getElementById("timer");
+
+function startTimer() {
+  if(timerinterval) return; // if On don't on it again
+  timerinterval = setInterval(() => {
+    seconds++;
+    display.innerText =`time : ${seconds} seconds`;
+  }, 1000);
+}
+
+function stopTimer(){
+  clearInterval(timerinterval);
+}
 
 const board = document.getElementById("board"); //* القائمة
 let flipped = [];
@@ -14,11 +30,15 @@ cards.forEach(symbol => { //* الكلمات
 
   card.addEventListener("click", () => {//* التعامل مع الكارت
     if (lock || flipped.includes(card) || card.classList.contains("matched")) return; //* التحقق من الحالة
-
+    startTimer();
+    
+    const attemptsElement = document.getElementById("attempts");
+    attemptsElement.innerText = `attempts: ${attempts}`;
     card.textContent = symbol; 
     flipped.push(card);
 
     if (flipped.length === 2) {
+      attempts++;
       lock = true;
       const [a, b] = flipped; //* الكارت الاول والثاني
       if (a.dataset.symbol === b.dataset.symbol) {
@@ -30,10 +50,20 @@ cards.forEach(symbol => { //* الكلمات
         lock = false;
         const allmatched = document.querySelectorAll(".matched");
         if (allmatched.length === cards.length) {
+          stopTimer();
           const restart = document.getElementById("restart");
           const congrats = document.getElementById("Congrats");
-          congrats.innerText = "You won, congrats!🎉🎉";
+          congrats.classList.remove("hidden");
           restart.classList.remove("hidden");
+          if(attempts < 10){
+            congrats.innerText = `congrats you win with ${attempts} attempts`
+          }
+          else if(attempts < 20){
+            congrats.innerText = `Good you win with ${attempts} attempts`
+          }
+          else{
+            congrats.innerText = `very bad but you win with ${attempts} attempts`
+          }
         }
       } else {
         setTimeout(() => {

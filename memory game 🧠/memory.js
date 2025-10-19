@@ -1,6 +1,7 @@
 const symbols = ["🐶", "🐱", "🐭", "🐻","🐺", "🦊","🐯","🐵"]; //*الاشكال 
 let cards = [...symbols, ...symbols]; //* التكرار
 cards.sort(() => Math.random() - 0.5); //* الترتيب 
+//---------------المؤقت--------------------
 let attempts = 0;
 let seconds = 0;
 let timerinterval;
@@ -17,7 +18,7 @@ function startTimer() {
 function stopTimer(){
   clearInterval(timerinterval);
 }
-
+//-----------------------------------------------------------
 
 const board = document.getElementById("board"); //* القائمة
 let flipped = [];

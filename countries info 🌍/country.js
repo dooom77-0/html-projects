@@ -29,6 +29,7 @@ async function getCountryInfo(name) {
     function displayCountryInfo(country) {
         countryInfo.innerHTML = `
         <h2>${country.name.common}</h2>
+        <p>borders: ${country.borders.join(', ') || 'No borders'}</p>
         <p>Official Name: ${country.name.official}</p>
         <p>Capital: ${country.capital}</p>
         <p>Continent: ${country.region}</p>

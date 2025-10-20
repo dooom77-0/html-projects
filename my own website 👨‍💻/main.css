@@ -341,6 +341,22 @@ section{
     box-shadow: 0 0px 20px rgba(45,1,147,0.3);
     transform: scale(1.1); 
 }
+footer{
+  background-color: #2d0193;
+}
+footer p{
+  text-align: center;
+  padding: 10px;
+  background-color: #2877ed;
+  color: #fff;
+  font: bold;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+footer p a{
+  text-decoration: none;
+  color: #fff;
+}
 
 
 

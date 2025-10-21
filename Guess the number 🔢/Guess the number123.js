@@ -25,10 +25,10 @@ function checkGuess(){
         input.disabled = true;
     }
     else if (guess < secretNumber){
-        alert('Higher ↑');
+        message.innerText = 'Higher ↑'
     }
     else if(guess > secretNumber){
-        alert('Lower ↓')
+        message.innerText = 'Lower ↓'
     }
     else{
     document.getElementById('Attempts').innerText = `Attemp No.${currentAttemps} from No.${maxAttempts}`

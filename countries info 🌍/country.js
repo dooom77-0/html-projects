@@ -5,7 +5,13 @@ const countryInfo = document.getElementById('result');
 button.addEventListener('click', () => {
     const countryName = input.value.trim();
     if (countryName === '') {
-        alert('Please enter a country name.');
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Please enter a country name',
+            showConfirmButton: false,
+            timer: 1500
+        })
         return;
     }
     getCountryInfo(countryName);
@@ -29,15 +35,15 @@ async function getCountryInfo(name) {
     function displayCountryInfo(country) {
         countryInfo.innerHTML = `
         <h2>${country.name.common}</h2>
-        <p>borders: ${country.borders.join(', ') || 'No borders'}</p>
-        <p>Official Name: ${country.name.official}</p>
-        <p>Capital: ${country.capital}</p>
-        <p>Continent: ${country.region}</p>
-        <p>Population: ${country.population.toLocaleString()} <span>(The number is not accurate)</span></p>
-        <p>the Area : ${country.area.toLocaleString()}</p>
-        <p>Currency: ${country.currencies[Object.keys(country.currencies)[0]].name}</p>
-        <p>languages: ${Object.values(country.languages).join(', ')}</p>
-        <p>Timezones: ${country.timezones.join(', ')}</p>
+        <p>الحدود: ${country.borders.join(', ') || 'No borders'}</p>
+        <p>الأسم الرسمي: ${country.name.official}</p>
+        <p>العاصمة: ${country.capital}</p>
+        <p>القارة: ${country.region}</p>
+        <p>عدد السكان: ${country.population.toLocaleString()} <span>(الرقم غير دقيق)</span></p>
+        <p>المساحة : ${country.area.toLocaleString()} km<sup>2</sup></p>
+        <p>العملة: ${country.currencies[Object.keys(country.currencies)[0]].name}</p>
+        <p>اللغات: ${Object.values(country.languages).join(', ')}</p>
+        <p>المناطق الزمنية: ${country.timezones.join(', ')}</p>
         <img src="${country.flags.png}" alt="${country.name.common} Flag">
 
         `;

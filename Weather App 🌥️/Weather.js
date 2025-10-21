@@ -5,7 +5,13 @@ const weatherInfo = document.getElementById('weather-info');
 button.addEventListener('click', () => {
     const location = input.value.trim();
     if (location === '') {
-        alert('Please enter a location.');
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Please enter a location',
+            showConfirmButton: false,
+            timer: 1500
+        })
         return;
     }
     getWeather(location);

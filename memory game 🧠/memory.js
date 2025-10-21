@@ -11,7 +11,7 @@ function startTimer() {
   if(timerinterval) return; // if On don't on it again
   timerinterval = setInterval(() => {
     seconds++;
-    display.innerText =`time : ${seconds} seconds`;
+    display.innerText =`time : ${seconds}s`;
   }, 1000);
 }
 

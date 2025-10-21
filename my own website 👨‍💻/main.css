@@ -135,11 +135,12 @@ section{
     font-size: 1.1em;
     font-weight: 600;
     display: inline-block;
-    padding:0.9375em 2.1875em;
+    padding:0.9375em 2.10em;
     border-radius: 15px;
     letter-spacing: 1px;
     margin-bottom: 30px;
     transition: 0.5s ease;
+    margin-right: 2em;
 
 }
 .main-btn:hover{

@@ -10,23 +10,27 @@
             .max-w-lg {
                 max-width: 100%;
             }
+            #container {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body class="w-full h-screen flex justify-center items-center bg-gradient-to-tr from-red-400 to-orange-200">
-    <div id="container" class=" grid-cols-1 max-w-lg w-full h-72 bg-slate-300 justify-center rounded-xl shadow-lg">
+    <div id="container" class=" grid-cols-1 max-w-lg w-full h-auto bg-slate-300 justify-center rounded-xl shadow-lg">
         <h1 id="title" class="text-center text-shadow-lg text-3xl mt-5 font-bold">Guess the number!</h1>
         <p id="Explain" class="text-center mt-10 text-orange-500 font-bold">Rules: Try to guess the number between 1,50 in 10 attempts
         .</p>
-        <div id="input-box" class="text-center mt-5 flex flex-col items-center">
+        <div id="input-box" class=" text-center mt-5 flex flex-col items-center">
             <input id="guess" step="1" type="number" placeholder="Put a number between 1,50" class="max-w-sm w-full 
             text-center placeholder:text-center border-2 border-gray-400 rounded-md px-4 py-2"
              min="1" max="50">
-             <button id="check" class="px-4 py-2 mt-6 rounded-md text-blue-500 
+             <button id="check" class="px-4 py-2 my-6 rounded-md text-blue-500 
              font-bold outline-3 outline-blue-500 hover:bg-blue-500 hover:text-white
              focus:outline-none focus:ring-2 focus:ring-blue-500">Guess</button>
 
-             <p id="message"></p>
+             <p id="message" class="text-red-600 font-bold mb-2"></p>
              <p id="Attempt"></p>
         </div>
     </div>

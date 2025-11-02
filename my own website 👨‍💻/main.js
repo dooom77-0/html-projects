@@ -8,6 +8,11 @@ mainBtn2.addEventListener('click', () => {
   window.open('https://github.com/dooom77-0/html-projects','_blank')
 });
 
+const mainBtn3 = document.getElementById('main-btn-3');
+mainBtn3.addEventListener('click', () => {
+  window.open('https://github.com/dooom77-0/React.js','_blank')
+});
+
 function Suggest() {
   alert('Note: This is my first project in html , css and javascript!')
 

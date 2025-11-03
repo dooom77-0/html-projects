@@ -6,6 +6,7 @@
     <meta name="description" content="تطبيق ويب يعرض آية قرآنية عشوائية مع تفسيرها.">
     <meta name="keywords" content="آية, قرآن, تفسير, إسلام, دين, تطبيق ويب">
     <meta name="author" content="Abdulrahman D7">
+    <link rel="stylesheet" href="Qur'an.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>آية اليوم</title>
     <style>
@@ -21,14 +22,17 @@
       }
     </style>
 </head>
-<body class="bg-slate-300 w-full h-screen flex justify-center items-center">
-  <div class="max-w-md w-full h-auto bg-slate-100 rounded-lg shadow-lg">
-    <h2 class="font-semibold text-2xl text-center m-5">آية اليوم</h2>
-    <div id="container" class="items-center bg-slate-200 rounded-lg p-5">
-      <p id="ayah" class="text-center font-semibold"></p>
-      <p id="surah" class="text-center m-3"></p>
-      <p id="tafsir" class="text-center m-3"></p>
-      <button id="btn" class="bg-blue-500 text-white py-2 px-4 rounded justify-center block mx-auto">آية جديدة</button>
+<body>
+  <div class="container">
+    <h2 >آية اليوم</h2>
+    <div id="container1" >
+      <p id="ayah" ></p>
+      <p id="surah" ></p>
+      <div class="tafsir">
+        <p id="tafsir" class="tafsir"></p>
+      </div>
+    <div class="btn-container">
+      <button id="btn" >آية جديدة</button>
     </div>
   </div>
 

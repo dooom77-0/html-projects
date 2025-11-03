@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(210, 210, 210);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+#container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #000;
+    padding-top: 5px;
+}
+#ayah{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+#surah{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+#btn{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #00f;
+    border: 2px solid #00f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#btn:hover{
+    background-color: #00f;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 100%;
+        padding: 5px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    p{
+        font-size: 20px;
+    }
+    #ayah{
+        font-size: 24px;
+        padding: 5px 0;
+    }
+    #surah{
+        font-size: 18px;
+    }
+    #btn{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+}

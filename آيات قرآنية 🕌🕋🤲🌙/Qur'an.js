@@ -11,6 +11,8 @@ async function getRandomAyah() {
         const tafsirLink = `https://tafsir.app/ayah/${ayah.surah.number}/${ayah.numberInSurah}`;
         document.getElementById("tafsir").innerHTML = `<a href="${tafsirLink}" target="_blank">عرض التفسير  tafsir.app</a>`;
 
+        
+
 
       } catch (err) {
         document.getElementById("ayah").textContent = "حدث خطأ أثناء جلب الآية.";

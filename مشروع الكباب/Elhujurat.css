@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+body{
+    background-color: #c9d6ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.container{
+    background-color: #fff;
+    width: 80%;
+    text-align: center;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+h1{
+    color: #2877ed;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+h2{
+    color: #000000;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    text-align: center;
+}
